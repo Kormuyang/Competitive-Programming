@@ -1,2 +1,2 @@
 # Competitive-Programming
-Enjoy MF
+Enjoy mfs
