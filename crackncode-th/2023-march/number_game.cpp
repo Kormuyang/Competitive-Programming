@@ -4,7 +4,6 @@ using namespace std;
 
 #define ll long long
 #define pi pair<int, int>
-#define pl pair<ll, ll>
 #define t3 tuple<int, int, int>
 #define sz(a) ((int) a.size())
 
