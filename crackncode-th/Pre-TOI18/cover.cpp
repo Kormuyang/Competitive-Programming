@@ -13,10 +13,9 @@ const int mxN = 1e5 + 1;
 
 const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
 
-vector<int> adj[mxN];
+vector<int> adj[mxN], edges[mxN];
 vector<vector<int>> dist(2, vector<int> (mxN, INF));
 bool vis[2][mxN];
-vector<int> edges[mxN];
 multiset<int> mx_dist;
 int ans[mxN];
 int n, m, p, a, b;
