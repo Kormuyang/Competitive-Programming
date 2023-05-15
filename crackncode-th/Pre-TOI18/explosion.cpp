@@ -26,10 +26,11 @@ int main() {
         for(int i = 1; i <= n; i++) b[i] = a[i] - (x * md), c[i] = 0;
         for(int i = 1; i <= n; i++) {
             c[i] += c[i - 1], b[i] -= c[i];
-            if(b[i] < 0) continue;
-            cnt += (b[i] - 1) / (y - x) + 1;
-            c[i] += cnt * (y - x);
-            if(i + 2 * m + 1 <= n) c[i + 2 * m + 1] -= cnt * (y - x);
+            if(b[i] > 0) {
+                int tmp = (b[i] - 1) / (y - x) + 1;
+                cnt += tmp; c[i] += tmp * (y - x);
+                if(i + 2 * m + 1 <= n) c[i + 2 * m + 1] -= tmp * (y - x);
+            }
         }
         if(cnt <= md) ans = md, r = md - 1;
         else l = md + 1;
