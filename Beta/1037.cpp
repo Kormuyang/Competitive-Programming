@@ -15,7 +15,8 @@ const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, 1}, {-1, -1}, {1, -
 
 char g[mxN][mxN];
 queue<t3> q;
-int n, m; pi st, en;
+int n, m;
+pi st, en;
 
 int main() {
     ios::sync_with_stdio(0); cin.tie(0);
