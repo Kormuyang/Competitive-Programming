@@ -23,11 +23,11 @@ int main() {
     for(int i = 1, a, b; i <= m; i++) {
         cin >> a >> b;
         if(s.find(a) != s.end()) s.erase(a);
-        else s.insert(a);
+        else s.emplace(a);
         if(s.find(a + b) != s.end()) s.erase(a + b);
-        else s.insert(a + b);
+        else s.emplace(a + b);
     }
-    s.insert(1); s.insert(n + 1);
+    s.emplace(1); s.emplace(n + 1);
     while(q--) {
         int x; cin >> x;
         auto it = s.upper_bound(x);
