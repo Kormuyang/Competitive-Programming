@@ -10,7 +10,6 @@ using namespace std;
 const int INF = 1e9;
 const int MOD = 1e6 + 7;
 const int mxN = 1e5 + 1;
-const int mxR = 2e3 + 1;
 
 t3 arr[mxN];
 map<pi, int> dp[2];
