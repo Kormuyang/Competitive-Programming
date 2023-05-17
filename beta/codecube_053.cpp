@@ -27,6 +27,7 @@ int main() {
             int now = i & 1, prev = (i - 1) & 1;
             for(int j = 0; j <= a; j++) for(int k = 0; k <= b; k++) for(int l = 0; l <= 60; l++) dp[now][j][k][l] = -INF;
             for(int j = 0; j <= a; j++) for(int k = 0; k <= b; k++) for(int l = 0; l <= 60; l++) {
+                if(dp[prev][j][k][l] == -INF) continue;
                 dp[now][j][k][l] = max(dp[now][j][k][l], dp[prev][j][k][l]);
                 if(j >= x + 1 and l + 1 >= 0 and l + 1 <= 60) {
                     dp[now][j - x][k][l + 1] = max(dp[now][j - x][k][l + 1], dp[prev][j][k][l] + v);
