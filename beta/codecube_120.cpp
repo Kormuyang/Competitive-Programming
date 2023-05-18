@@ -12,6 +12,8 @@ const int MOD = 1e6 + 7;
 const int mxN = 1e1 + 1;
 const int mxM = 1e6 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 int a[mxN], dp[mxM], path[mxM], res1[mxN], res2[mxN];
 int p, m, n;
 
