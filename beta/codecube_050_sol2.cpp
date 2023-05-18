@@ -11,6 +11,8 @@ const int INF = 1e9;
 const int MOD = 1e6 + 7;
 const int mxN = 1e5 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 t3 arr[mxN];
 map<pi, int> dp[2];
 int R, C, N, ans = INF;
