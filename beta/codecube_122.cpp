@@ -43,11 +43,11 @@ int main() {
             else if(g[xx][yy] != '.' and islower(g[xx][yy]) and !vis[c | (1 << mp[g[xx][yy]])][xx][yy]) {
                 vis[c][xx][yy] = true; q.emplace(d + 1, c | (1 << mp[g[xx][yy]]), xx, yy);
             }
-            else if(g[xx][yy] != '.' and isupper(g[xx][yy]) and !vis[c][xx][yy] and (c | (1 << mp[g[xx][yy]])) == c) {
+            else if(g[xx][yy] != '.' and isupper(g[xx][yy]) and !vis[c][xx][yy] and (c & (1 << mp[g[xx][yy]]))) {
                 vis[c][xx][yy] = true; q.emplace(d + 1, c, xx, yy);
             }
         }
     }
-    cout << -1 << '\n';
+    cout << "-1\n";
     return 0;
 }
