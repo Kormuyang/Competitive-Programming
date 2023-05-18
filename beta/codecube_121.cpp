@@ -12,6 +12,8 @@ const int MOD = 1e6 + 7;
 const int mxN = 1e5 + 1;
 const int mxM = 1e6 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 t3 edges[mxM];
 int p[mxN], parent[mxN];
 int n, m, ans = 0;
