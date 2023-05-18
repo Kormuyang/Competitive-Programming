@@ -12,6 +12,8 @@ const int MOD = 1e6 + 7;
 const int mxN = 1e2 + 1;
 const int mxM = 1e4 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 int a[mxN][mxM], dp[mxN][mxM];
 deque<pi> dq;
 int n, m, k, ans = 0;
