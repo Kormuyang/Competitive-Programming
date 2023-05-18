@@ -12,6 +12,8 @@ const int MOD = 1e6 + 7;
 const int mxN = 1e5 + 1;
 const int mxR = 2e3 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 t3 arr[mxN];
 int dp[2][mxR][2];
 int R, C, N, ans = INF;
