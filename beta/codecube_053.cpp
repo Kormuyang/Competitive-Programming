@@ -12,6 +12,8 @@ const int MOD = 1e6 + 7;
 const int mxN = 3e1 + 1;
 const int mxH = 1e2 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 int dp[2][mxH][mxH][2 * mxN];
 int n, a, b, m;
 
