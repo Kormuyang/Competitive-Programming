@@ -11,6 +11,8 @@ const ll INF = 1e18;
 const int MOD = 1e6 + 7;
 const int mxN = 1e5 + 1;
 
+const int di[8][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}, {-1, -1}, {-1, 1}, {1, -1}, {1, 1}};
+
 vector<pi> adj[mxN];
 int a[mxN], vis[mxN];
 int n, s, t, r;
