@@ -5,7 +5,6 @@ using namespace std;
 #define ll long long
 #define pi pair<int, int>
 #define t3 tuple<int, int, int>
-#define t4 tuple<int, int, int, int>
 #define sz(a) ((int) a.size())
 
 const int mxN = 1e6 + 1;
