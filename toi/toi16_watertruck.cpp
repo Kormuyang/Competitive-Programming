@@ -7,7 +7,7 @@ using namespace std;
 #define t3 tuple<int, int, int>
 #define sz(a) ((int) a.size())
 
-const int INF = 2e9;
+const int INF = 1e9;
 const int mxN = 1e5 + 1;
 
 vector<pi> adj[mxN], adj2[mxN];
