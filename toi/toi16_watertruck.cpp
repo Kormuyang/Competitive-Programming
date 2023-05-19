@@ -62,8 +62,8 @@ int main() {
                 dist[v] = d + w; pq.emplace(d + w, v);
             }
         }
-        for(int j = i + 1; j < sz(nodes); j++) {
-            if(dist[nodes[j]] != INF) edges.emplace_back(dist[nodes[j]], i, j);
+        for(int j = i + 1; j < sz(nodes); j++) if(dist[nodes[j]] != INF) {
+            edges.emplace_back(dist[nodes[j]], i, j);
         }
     }
     if(sz(edges) == 1) {
