@@ -7,7 +7,6 @@ using namespace std;
 #define t3 tuple<int, int, int>
 #define sz(a) ((int) a.size())
 
-const int INF = 1e9;
 const int mxN = 5e5 + 1;
 
 int a[mxN], dp[mxN];
