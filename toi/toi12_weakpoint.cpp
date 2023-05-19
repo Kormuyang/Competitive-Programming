@@ -20,9 +20,7 @@ void dfs(int u, int p) {
         if(!vis[v]) {
             dfs(v, u); cycle[u] |= cycle[v]; if(!cycle[v]) cnt[u] += cnt[v];
         }
-        else if(v == m) {
-            cycle[u] = true;
-        }
+        else if(v == m) cycle[u] = true;
     }
     if(cnt[u] > ans.second) ans = {u, cnt[u]};
     else if(cnt[u] == ans.second) ans.first = min(ans.first, u);
