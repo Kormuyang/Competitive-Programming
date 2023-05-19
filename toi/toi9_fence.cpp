@@ -24,7 +24,7 @@ void solve() {
         qs[i][j] += qs[i - 1][j] + qs[i][j - 1] - qs[i - 1][j - 1];
     }
     for(int gap = min(n, m) - 1; gap >= 2; gap--) for(int i = 1; i + gap <= n; i++) for(int j = 1; j + gap <= m; j++) {
-        if(calc(i, j, i + gap, j + gap) - calc(i + 1, j + 1, i + gap - 1, j + gap - 1) == 0) {
+        if(calc(i, j, i + gap, j + gap) == calc(i + 1, j + 1, i + gap - 1, j + gap - 1)) {
             cout << gap + 1 << '\n'; return;
         }
     }
