@@ -18,7 +18,6 @@ int main() {
     for(int i = 1; i <= n; i++) {
         cin >> qs[i]; qs[i] += qs[i - 1]; pmin[0][i] = min(pmin[0][i - 1], -qs[i - 1]);
     }
-    pmin[0][0] = INF;
     for(int i = 1; i <= k; i++) {
         int now = i & 1, prev = (i - 1) & 1;
         dp[now][0] = pmin[now][0] = INF;
