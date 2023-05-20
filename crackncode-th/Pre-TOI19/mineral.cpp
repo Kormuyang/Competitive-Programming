@@ -25,7 +25,7 @@ int main() {
     for(int i = 1; i <= n; i++) cin >> a[i], a[i] *= 1000;
     for(int i = 1; i <= n; i++) cin >> b[i];
     int l = 0, r = 1e7;
-    for(int cnt = 0; cnt < 50; cnt++) {
+    while(l <= r) {
         int md = (l + r) / 2;
         vector<ll> qs(n + 1), v(n + 1);
         for(int i = 1; i <= n; i++) v[i] = qs[i] = qs[i - 1] + a[i] - 1ll * b[i] * md;
