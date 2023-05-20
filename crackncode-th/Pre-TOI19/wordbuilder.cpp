@@ -14,7 +14,7 @@ vector<int> adj[mxN];
 char a[mxN];
 bool vis[mxN];
 queue<pi> q;
-queue<int> q2[26];
+queue<int> res[26];
 int n, m, k, ans;
 
 int main() {
@@ -27,17 +27,17 @@ int main() {
     q.emplace(0, 1); vis[1] = true;
     while(!q.empty()) {
         auto [d, u] = q.front(); q.pop();
-        q2[a[u] - 'A'].emplace(d);
+        res[a[u] - 'A'].emplace(d);
         for(auto v : adj[u]) if(!vis[v]) {
             vis[v] = true; q.emplace(d + 2, v);
         }
     }
     for(int i = 1; i <= k; i++) {
         char c; cin >> c;
-        if(q2[c - 'A'].empty()) {
+        if(res[c - 'A'].empty()) {
             cout << "-1\n"; return 0;
         }
-        ans += q2[c - 'A'].front(); q2[c - 'A'].pop();
+        ans += res[c - 'A'].front(); res[c - 'A'].pop();
     }
     cout << ans << '\n';
     return 0;
