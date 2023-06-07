@@ -7,7 +7,7 @@ using namespace std;
 const int mxN = 5e5 + 1;
 const int MOD = 1e9 + 7;
 
-vector<int> adj[mxN];
+set<int> adj[mxN];
 int fac[mxN];
 int ans = 1;
 
